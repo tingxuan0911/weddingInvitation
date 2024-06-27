@@ -3,8 +3,12 @@ import { ref, provide } from "vue";
 import Header from "./components/header.vue";
 import Introduce from "./components/introduce.vue";
 import Celebrate from "./components/celebrate.vue";
-import Timeline from "./components/timeline.vue"
+import Timeline from "./components/timeline.vue";
 import Map from "./components/map.vue";
+import DressCode from "./components/dressCode.vue";
+import Photo from "./components/photo.vue";
+import Countdown from "./components/countdown.vue";
+import Footer from "./components/footer.vue";
 
 import dresscode from "@/img/dresscode.jpg";
 import pic5 from "@/img/pic5.jpg";
@@ -29,13 +33,13 @@ window.addEventListener("resize", handleWindowResize);
 <template>
   <div class="text-[--main-text-color] tracking-widest">
     <Header />
-
     <Introduce />
-
     <Celebrate />
-
     <Map />
-
     <Timeline />
+    <DressCode />
+    <Photo />
+    <Countdown />
+    <Footer />
   </div>
 </template>

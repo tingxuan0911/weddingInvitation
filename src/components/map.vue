@@ -6,7 +6,7 @@ import mapPic from "@/img/map.webp";
   <div>
     <div class="flex items-center gap-[2%]">
       <div class="relative w-[70%] h-fit py-20 bg-[--main-text-color] text-white">
-        <div class="absolute -top-7 text-[--main-text-color] left-6 text-3xl font-bold">MAP</div>
+        <div class="absolute -top-7 text-[--main-text-color] left-6 text-2xl font-bold">MAP</div>
         <div class="w-fit mx-auto">
           <div class="text-2xl font-bold">抱一茶屋</div>
           <div class="text-sm font-light mt-2 mb-8">高雄市鼓山區美術館路80號（高雄市立美術館園區內）</div>
