@@ -4,7 +4,7 @@ import mapPic from "@/img/map.webp";
 
 <template>
   <div>
-    <div class="flex items-center gap-[2%]">
+    <div class="flex items-center gap-[2%] mb-32">
       <div class="relative w-[70%] h-fit py-20 bg-[--main-text-color] text-white">
         <div class="absolute -top-7 text-[--main-text-color] left-6 text-2xl font-bold">MAP</div>
         <div class="w-fit mx-auto">

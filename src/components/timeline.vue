@@ -1,9 +1,11 @@
+
+複製程式碼
 <script setup>
 import { ref } from "vue";
 
-const timline = ref([
+const timeline = ref([
   {
-    time: "4:30",
+    time: "04:30",
     ampm: "PM",
     route: "Ceremony"
   },
@@ -11,6 +13,21 @@ const timline = ref([
     time: "05:00",
     ampm: "PM",
     route: "Photo"
+  },
+  {
+    time: "06:00",
+    ampm: "PM",
+    route: "Dinner"
+  },
+  {
+    time: "07:00",
+    ampm: "PM",
+    route: "First Dance"
+  },
+  {
+    time: "07:30",
+    ampm: "PM",
+    route: "PARTY!"
   }
 ]);
 </script>
@@ -18,17 +35,20 @@ const timline = ref([
 <template>
   <div class="px-5">
     <div class="text-2xl font-bold">Wedding Timeline</div>
-    <div class="text-lg">
-      <div v-for="list,idx in timline" :key="idx">
-        <div class="flex justify-center items-center">
+    <div class="mx-auto w-fit text-xl font-medium">
+      <div v-for="(item, index) in timeline" :key="index">
+        <div class="flex items-center ml-10">
           <div class="flex items-end">
-            <div>04:30</div>
-            <div class="text-xs">PM</div>
+            <div>{{ item.time }}</div>
+            <div class="text-xs">{{ item.ampm }}</div>
           </div>
-          <div class="mx-14 w-[5px] h-[5px] bg-[--main-text-color] rounded-full"></div>
-          <div>Ceremony</div>
+          <div
+            class="mx-14 my-20 w-[5px] h-[5px] bg-[--main-text-color] rounded-full after:block after:w-[1px] after:h-[165px] after:ml-[2px] after:bg-[--main-text-color]"
+          ></div>
+          <div>{{ item.route }}</div>
         </div>
       </div>
+      <div class=" text-sm ml-16 mt-[100px] italic font-bold">hope you enjoy the wedding</div>
     </div>
   </div>
 </template>

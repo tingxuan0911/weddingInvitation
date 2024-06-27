@@ -10,9 +10,6 @@ import Photo from "./components/photo.vue";
 import Countdown from "./components/countdown.vue";
 import Footer from "./components/footer.vue";
 
-import dresscode from "@/img/dresscode.jpg";
-import pic5 from "@/img/pic5.jpg";
-import pic6 from "@/img/pic6.jpg";
 // 裝置監聽
 const device = ref("");
 provide("device", device);

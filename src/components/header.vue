@@ -4,7 +4,7 @@ import headerPic from "@/img/header.jpg";
 
 <template>
   <div>
-    <div class="p-5">
+    <div class="p-5 mb-32">
       <div
         class="relative w-full h-dvh p-5 bg-cover bg-top bg-fixed text-white text-center"
         :style="{ 'background-image': `url(${headerPic})` }"

@@ -27,7 +27,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <div class="relative max-w-[940px] mx-auto my-20">
+    <div class="relative max-w-[940px] mx-auto  mb-36">
       <div
         class="absolute top-[-18px] right-1/2 translate-x-1/2 text-2xl font-bold"
       >celebrate with us</div>

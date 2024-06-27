@@ -1,11 +1,24 @@
 <script setup>
+import { ref } from "vue";
 import bride from "@/img/bride.jpg";
 import groom from "@/img/groom.jpg";
+const aboutBride = ref([
+  "introduce yourself",
+  "introduce yourself",
+  "introduce yourself",
+  "introduce yourself",
+  "introduce yourself"
+]);
+const aboutGroom = ref([
+  "introduce yourself",
+  "introduce yourself",
+  "introduce yourself"
+]);
 </script>
 
 <template>
   <div>
-    <div class="max-w-[640px] mx-auto my-20">
+    <div class="max-w-[640px] mx-auto mb-32">
       <!-- 新娘 -->
       <div class="flex justify-between items-center">
         <div
@@ -18,9 +31,9 @@ import groom from "@/img/groom.jpg";
         </div>
         <div class="w-[60%]">
           <div class="text-xl font-bold mb-3">Gabrielle</div>
-          <div class="mb-1">introduce yourself</div>
-          <div class="mb-1">introduce yourself</div>
-          <div class="mb-1">introduce yourself</div>
+          <div v-for=" (item,idx) in aboutBride" :key="idx">
+            <div class="mb-1">{{item}}</div>
+          </div>
         </div>
       </div>
       <!-- 分隔 -->
@@ -39,9 +52,9 @@ import groom from "@/img/groom.jpg";
       <div class="flex justify-between items-center">
         <div class="w-[60%] text-end">
           <div class="text-xl font-bold mb-3">Jay</div>
-          <div class="mb-1">introduce yourself</div>
-          <div class="mb-1">introduce yourself</div>
-          <div class="mb-1">introduce yourself</div>
+         <div v-for=" (item,idx) in aboutGroom" :key="idx">
+            <div class="mb-1">{{item}}</div>
+          </div>
         </div>
         <div
           class="relative w-[35%] aspect-[3/4] p-5 bg-cover bg-center text-white"
