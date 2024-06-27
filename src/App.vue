@@ -1,7 +1,14 @@
 <script setup>
 import { ref, provide } from "vue";
-import main from "./components/main.vue";
-import footer from "./components/footer.vue";
+import Header from "./components/header.vue";
+import Introduce from "./components/introduce.vue";
+import Celebrate from "./components/celebrate.vue";
+import Timeline from "./components/timeline.vue"
+import Map from "./components/map.vue";
+
+import dresscode from "@/img/dresscode.jpg";
+import pic5 from "@/img/pic5.jpg";
+import pic6 from "@/img/pic6.jpg";
 // 裝置監聽
 const device = ref("");
 provide("device", device);
@@ -20,8 +27,15 @@ window.addEventListener("resize", handleWindowResize);
 </script>
 
 <template>
-  <div>
-    <main />
-    <footer />
+  <div class="text-[--main-text-color] tracking-widest">
+    <Header />
+
+    <Introduce />
+
+    <Celebrate />
+
+    <Map />
+
+    <Timeline />
   </div>
 </template>
