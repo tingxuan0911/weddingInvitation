@@ -1,9 +1,11 @@
 <script setup>
-import { ref, onMounted, computed } from "vue";
+import { ref, onMounted, computed, inject } from "vue";
 import pic1 from "@/img/pic1.jpg";
 import pic2 from "@/img/pic2.jpg";
 import pic3 from "@/img/pic3.jpg";
 import pic4 from "@/img/pic4.jpg";
+
+const device = inject("device");
 
 // celebrate with us圖片切換
 const imageLeft = ref([pic1, pic2]);
@@ -27,12 +29,14 @@ onMounted(() => {
 
 <template>
   <div>
-    <div class="relative max-w-[940px] mx-auto  mb-36">
+    <div class="relative max-w-[940px] mx-auto mb-36">
       <div
-        class="absolute top-[-18px] right-1/2 translate-x-1/2 text-2xl font-bold"
+        class="absolute top-[-18px] right-1/2 translate-x-1/2 text-2xl font-bold text-nowrap"
       >celebrate with us</div>
       <div
-        class="] py-5 mx-auto flex justify-center items-center gap-[3%] border border-[--main-text-color]"
+        :class="[' py-5 mx-auto  border border-[--main-text-color]',
+        ,{'w-[90%] flex justify-center items-center gap-[3%]': device === 'pc'},
+        {'w-[80%] max-w-[360px]': device === 'mobile'}]"
       >
         <!-- 圖左 -->
         <div class="w-[30%]">
