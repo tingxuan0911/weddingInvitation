@@ -1,15 +1,20 @@
 <script setup>
+import { inject } from "vue";
 import headerPic from "@/img/header.jpg";
+const device = inject("device");
 </script>
 <template>
   <div>
     <div class="p-5 mb-32">
-      <div class="relative w-full h-screen text-white text-center p-5">
-       
-        <div
+      <div
+        :class="['relative w-full h-screen bg-cover bg-center text-white text-center p-5'
+      ,{'bg-fixed': device === 'pc'}]"
+        :style="{ backgroundImage: `url(${headerPic})` }"
+      >
+        <!-- <div
           class="absolute -z-10 top-0 right-0 inset-0 bg-cover bg-center bg-fixed-ios"
-          :style="{ backgroundImage: `url(${headerPic})`, backgroundSize: 'cover' }"
-        ></div>
+          :style="{ backgroundImage: `url(${headerPic})` }"
+        ></div>-->
 
         <div class="text-xs">2024</div>
         <div class="text-2xl font-bold">We’re getting married</div>
@@ -26,11 +31,4 @@ import headerPic from "@/img/header.jpg";
     </div>
   </div>
 </template>
-<style scoped>
-  .bg-fixed-ios {
-    /* 以下是针对iOS的固定背景样式 */
-    background-attachment: fixed;
-    -webkit-background-clip: padding-box; /* 防止iOS背景拉伸 */
-  }
-</style>
 
