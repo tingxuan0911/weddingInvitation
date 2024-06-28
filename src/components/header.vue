@@ -1,16 +1,14 @@
 <script setup>
-import { inject } from "vue";
 import headerPic from "@/img/header.jpg";
-const device = inject("device");
 </script>
 
 <template>
   <div>
     <div class="p-5 mb-32">
       <div class="relative w-full h-screen text-white text-center p-5">
-        <!-- 使用 ::before 伪元素显示背景图片 -->
+        <!-- 背景圖片 -->
         <div
-          class="header inset-0 bg-cover bg-center"
+          class="absolute -z-10 top-0 right-0 inset-0 bg-cover bg-center"
           :style="{ backgroundImage: `url(${headerPic})` }"
         ></div>
 
@@ -30,16 +28,3 @@ const device = inject("device");
   </div>
 </template>
 
-<style scoped>
-.header {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  /* width: 100%; */
-  /* height: 100%; */
-  /* background-size: cover; */
-  /* background-position: center; */
-  /* background-image: url(${headerPic}); */
-}
-</style>
