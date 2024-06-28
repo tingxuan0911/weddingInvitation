@@ -37,7 +37,19 @@ const device = inject("device");
         :class="[{ 'w-[25%]': device === 'pc'},
         {' w-[80%] mx-auto mt-8': device === 'mobile'}]"
       >
-        <img :src="mapPic" alt />
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=高雄市鼓山區美術館路80號"
+          target="_blank"
+          class=" group relative"
+        >
+          <img :src="mapPic" alt />
+          <div
+            class="absolute top-0 flex justify-center items-center w-full h-full bg-black bg-opacity-70 text-white duration-700 opacity-0
+            group-hover:opacity-100"
+          >
+            <div>OPEN GOOGLE MAP</div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
