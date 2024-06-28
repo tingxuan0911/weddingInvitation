@@ -6,7 +6,7 @@ import headerPic from "@/img/header.jpg";
   <div>
     <div class="p-5 mb-32">
       <div
-        class="header relative w-full h-dvh p-5  text-white text-center"
+        class="header relative w-full aspect-[3/4] p-5  text-white text-center"
         :style="{ 'background-image': `url(${headerPic})` }"
       >
         <div class="text-xs">2024</div>
@@ -28,8 +28,7 @@ import headerPic from "@/img/header.jpg";
 .header{
   /* background-size:  100% auto;  */
      background-size:   contain; 
-      background-repeat:  no-repeat; 
-      background-position:  center center ; 
+     background-repeat: no-repeat;
       background-attachment: fixed;
 }
   
