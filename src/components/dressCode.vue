@@ -1,6 +1,7 @@
 <script setup>
-import { ref } from "vue";
+import { ref, inject } from "vue";
 import dresscode from "@/img/dresscode.jpg";
+const device = inject("device");
 
 const dressColor = ref([
   {
@@ -23,7 +24,11 @@ const dressColor = ref([
 </script>
 <template>
   <div class="p-5 mb-20">
-    <div class="relative w-full h-fit py-32 text-white text-center p-5">
+    <div
+      :class="['relative w-full h-fit py-32 bg-cover bg-center text-white text-center p-5',
+      {' bg-fixed': device === 'pc'}]"
+      :style="{ backgroundImage: `url(${dresscode})` }"
+    >
       <!-- 背景圖片 -->
       <div
         class="absolute -z-10 top-0 right-0 inset-0 bg-cover bg-center"

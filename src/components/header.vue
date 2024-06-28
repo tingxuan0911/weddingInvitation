@@ -11,11 +11,6 @@ const device = inject("device");
       ,{' bg-fixed': device === 'pc'}]"
         :style="{ backgroundImage: `url(${headerPic})` }"
       >
-        <!-- <div
-          class="absolute -z-10 top-0 right-0 inset-0 bg-cover bg-center bg-fixed-ios"
-          :style="{ backgroundImage: `url(${headerPic})` }"
-        ></div>-->
-
         <div class="text-xs">2024</div>
         <div class="text-2xl font-bold">We’re getting married</div>
         <div class="flex justify-between pt-3 mt-5 border-t border-white">
