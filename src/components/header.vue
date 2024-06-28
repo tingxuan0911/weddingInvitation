@@ -8,7 +8,7 @@ const device = inject("device");
   <div>
     <div class="p-5 mb-32">
       <div
-        :class="['header relative w-full h-dvh p-5 bg-cover bg-center  text-white text-center',
+        :class="['header relative w-full h-[100%] p-5 bg-cover bg-center  text-white text-center',
          {'bg-fixed ': device === 'pc'},
         {'  ': device === 'mobile'}]"
         :style="{ 'background-image':` url(${headerPic}) `}"
@@ -17,9 +17,9 @@ const device = inject("device");
   </div>
 </template>
 <style scoped>
-html {
+/* html {
   height: 100%;
-}
+} */
 /* .header::before {
   contain: "";
   position: fixed;
