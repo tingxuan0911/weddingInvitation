@@ -16,7 +16,7 @@ import headerPic from "@/img/header.jpg";
   </div>
 </template>
 <style scoped>
-  .header::before{
+  /* .header::before{
     contain: '';
     position: fixed;
     z-index: -1;
@@ -26,5 +26,5 @@ import headerPic from "@/img/header.jpg";
     left: 0;
     background-size: cover;
     background-color: transparent;
-  }
+  } */
 </style>
