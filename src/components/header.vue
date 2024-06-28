@@ -1,12 +1,16 @@
 <script setup>
+import { inject } from "vue";
 import headerPic from "@/img/header.jpg";
+const device = inject("device");
 </script>
 
 <template>
   <div>
     <div class="p-5 mb-32">
       <div
-        class="header relative w-full h-dvh p-5 bg-cover bg-center bg-fixed text-white text-center"
+        :class="['header relative w-full h-dvh p-5 bg-cover bg-center  text-white text-center',
+         {'bg-fixed ': device === 'pc'},
+        {'  ': device === 'mobile'}]"
         :style="{ 'background-image':` url(${headerPic}) `}"
       ></div>
     </div>
