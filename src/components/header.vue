@@ -25,6 +25,6 @@ import headerPic from "@/img/header.jpg";
     bottom: 0;
     left: 0;
     background-size: cover;
-    /* background-color: transparent; */
+    background-color: transparent;
   }
 </style>
