@@ -39,7 +39,10 @@ onMounted(() => {
         {'w-[80%] max-w-[360px]': device === 'mobile'}]"
       >
         <!-- 圖左 -->
-        <div class="w-[30%]">
+        <div
+          :class="[{'w-[30%]': device === 'pc'},
+        {'w-[90%] mx-auto ': device === 'mobile'}]"
+        >
           <div
             class="relative w-full aspect-[3/4] p-5 bg-cover bg-center text-white"
             :style="{ 'background-image': `url(${celebrateLeft})` }"
@@ -47,7 +50,9 @@ onMounted(() => {
         </div>
         <!-- 中 -->
         <div
-          class="flex justify-center items-center w-[30%] aspect-[3/4] border border-[--main-text-color]"
+          :class="['flex justify-center items-center  aspect-[3/4] border border-[--main-text-color]'
+          ,{'w-[30%]': device === 'pc'},
+        {'w-[90%] mx-auto my-5 ': device === 'mobile'}]"
         >
           <div class="text-center text-sm">
             2023.12.17
@@ -57,7 +62,8 @@ onMounted(() => {
           </div>
         </div>
         <!-- 圖右 -->
-        <div class="w-[30%]">
+        <div :class="['',{'w-[30%]': device === 'pc'},
+        {'w-[90%] mx-auto ': device === 'mobile'}]">
           <div
             class="relative w-full aspect-[3/4] p-5 bg-cover bg-center text-white"
             :style="{ 'background-image': `url(${celebrateRight})` }"

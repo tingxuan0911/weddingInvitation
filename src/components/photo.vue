@@ -1,7 +1,9 @@
 <script setup>
-import { ref, onMounted, watchEffect, onBeforeUnmount } from "vue";
+import { ref, onMounted, watchEffect, onBeforeUnmount, inject } from "vue";
 import pic1 from "@/img/pic5.jpg";
 import pic2 from "@/img/pic6.jpg";
+
+const device = inject("device");
 
 const morephoto = ref(false);
 const photos = ref([pic1, pic2, pic2, pic1, pic1, pic2, pic2, pic1]);
@@ -25,9 +27,9 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class=" mb-32">
+  <div class="mb-32">
     <div class="mb-16 text-center text-2xl font-bold">Engagement Photo + Video</div>
-    <div @click="morephoto=true" class="group relative max-w-[640px] mx-auto cursor-pointer">
+    <div @click="morephoto=true" class="group relative max-w-[640px] mx-auto cursor-pointer px-5">
       <div
         class="absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 z-10 flex justify-center items-center w-[95%] h-[95%] border border-white text-white text-4xl font-extrabold"
       >
@@ -66,7 +68,9 @@ onBeforeUnmount(() => {
       <div class="flex flex-wrap justify-center gap-[2%] mx-auto py-24 w-[80%] max-w-[900px]">
         <div v-for=" (item,idx) in photos" :key="idx">
           <div
-            class="w-[30dvw] max-w-[400px] aspect-[3/4] bg-cover bg-center my-2"
+            :class="['max-w-[400px] aspect-[3/4] bg-cover bg-center my-2',
+            {'w-[30dvw] ': device === 'pc'},
+        {' w-[70dvw] ': device === 'mobile'}]"
             :style="{ 'background-image': `url(${item})` }"
           ></div>
         </div>

@@ -1,12 +1,18 @@
 <script setup>
+import { inject } from "vue";
 import mapPic from "@/img/map.webp";
+const device = inject("device");
 </script>
 
 <template>
   <div>
-    <div class="flex items-center gap-[2%] mb-32">
-      <div class="relative w-[70%] h-fit py-20 bg-[--main-text-color] text-white">
-        <div class="absolute -top-7 text-[--main-text-color] left-6 text-2xl font-bold">MAP</div>
+    <div :class="[' mb-32',{'flex items-center gap-[2%]': device === 'pc'}]">
+      <div
+        :class="['relative h-fit  px-5 bg-[--main-text-color] text-white'
+      ,{ 'w-[70%] py-20': device === 'pc'},
+        {'  w-[100%] py-14': device === 'mobile'}]"
+      >
+        <div class="absolute -top-6 text-[--main-text-color] left-6 text-2xl font-bold">MAP</div>
         <div class="w-fit mx-auto">
           <div class="text-2xl font-bold">抱一茶屋</div>
           <div class="text-sm font-light mt-2 mb-8">高雄市鼓山區美術館路80號（高雄市立美術館園區內）</div>
@@ -27,7 +33,10 @@ import mapPic from "@/img/map.webp";
           </div>
         </div>
       </div>
-      <div class="w-[25%]">
+      <div
+        :class="[{ 'w-[25%]': device === 'pc'},
+        {' w-[80%] mx-auto mt-8': device === 'mobile'}]"
+      >
         <img :src="mapPic" alt />
       </div>
     </div>

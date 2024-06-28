@@ -12,7 +12,7 @@ const scrollToTop = () => {
 <template>
   <div>
     <div
-      class="relative w-full bg-[--main-text-color] text-white text-center tracking-widest text-sm py-10"
+      class="relative w-full bg-[--main-text-color] text-white text-center tracking-widest text-sm px-2 py-10 "
     >
       <div
         @click="scrollToTop()"
@@ -26,9 +26,9 @@ const scrollToTop = () => {
       </div>
       <div class="mb-2">
         WEB DEVELOPED BY © SHANNA / PHOTO ©
-        <a href="https://www.pexels.com/zh-tw/">PEXELS</a>
+        <a href="https://www.pexels.com/zh-tw/" class="  underline">PEXELS</a>
       </div>
-      <div>All rights reserved.</div>
+      <div>ALL RIGHTS RESERVED.</div>
     </div>
   </div>
 </template>

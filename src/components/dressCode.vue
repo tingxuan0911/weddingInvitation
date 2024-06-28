@@ -29,7 +29,7 @@ const dressColor = ref([
     >
       <div>
         <div class="text-2xl font-bold mb-20">Dress Code</div>
-        <div class="flex justify-center items-end gap-[60px]">
+        <div class="flex flex-wrap justify-center items-end gap-[60px] mx-auto w-[300px] sm:w-[600px]">
           <div v-for="(item, idx) in dressColor" :key="idx">
             <div class="w-[70px] text-center">
               <div class="text-sm mb-10">{{ item.color }}</div>

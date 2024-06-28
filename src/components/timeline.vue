@@ -1,7 +1,8 @@
 
 複製程式碼
 <script setup>
-import { ref } from "vue";
+import { ref ,inject} from "vue";
+const device = inject("device");
 
 const timeline = ref([
   {
@@ -35,9 +36,10 @@ const timeline = ref([
 <template>
   <div class="px-5">
     <div class="text-2xl font-bold">Wedding Timeline</div>
-    <div class="mx-auto w-fit text-xl font-medium">
+    <div class="mx-auto w-fit  font-medium">
       <div v-for="(item, index) in timeline" :key="index">
-        <div class="flex items-center ml-10">
+        <div :class="['flex items-center ',{'ml-10 text-xl': device === 'pc'},
+        {'text-md ml-7 ': device === 'mobile'}]">
           <div class="flex items-end">
             <div>{{ item.time }}</div>
             <div class="text-xs">{{ item.ampm }}</div>

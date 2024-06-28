@@ -25,7 +25,7 @@ const aboutGroom = ref([
     <div class="max-w-[640px] mx-auto mb-32">
       <!-- 新娘 -->
       <div
-        :class="[{'flex justify-between items-center': device === 'pc'},{' flex flex-col  items-center': device === 'mobile'}]"
+        :class="[{'flex justify-between items-center': device === 'pc'},{' flex flex-col  items-center gap-5': device === 'mobile'}]"
       >
         <div
           :class="['relative aspect-[3/4] p-5 bg-cover bg-center text-white',{' w-[35%]': device === 'pc'},{'  w-[70%] max-w-[300px]': device === 'mobile'}]"
@@ -40,7 +40,7 @@ const aboutGroom = ref([
         >
           <div class="text-xl font-bold mb-3">Gabrielle</div>
           <div v-for="(item, idx) in aboutBride" :key="idx">
-            <div class="mb-1">{{ item }}</div>
+            <div class="mb-2">{{ item }}</div>
           </div>
         </div>
       </div>
@@ -60,16 +60,16 @@ const aboutGroom = ref([
       </div>
       <!-- 新郎 -->
       <div
-        :class="[{'flex justify-between items-center': device === 'pc'},{' flex flex-col-reverse  items-center': device === 'mobile'}]"
+        :class="[{'flex justify-between items-center': device === 'pc'},{' flex flex-col-reverse  items-center gap-5': device === 'mobile'}]"
       >
         <div :class="['text-end',{'w-[60%] ': device === 'pc'},{' w-[70%] max-w-[300px] ': device === 'mobile'}]">
           <div class="text-xl font-bold mb-3">Jay</div>
           <div v-for="(item, idx) in aboutGroom" :key="idx">
-            <div class="mb-1">{{ item }}</div>
+            <div class="mb-2">{{ item }}</div>
           </div>
         </div>
         <div
-         :class="['relative aspect-[3/4] p-5 bg-cover bg-center text-white',{' w-[35%]': device === 'pc'},{'  w-[70%] max-w-[300px]': device === 'mobile'}]"
+         :class="['relative aspect-[3/4] p-5 bg-cover bg-center text-white',{' w-[35%]': device === 'pc'},{'  w-[70%] max-w-[300px] ': device === 'mobile'}]"
           :style="{ 'background-image': `url(${groom})` }"
         >
           <div
