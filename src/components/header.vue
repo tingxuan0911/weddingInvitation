@@ -7,36 +7,46 @@ const device = inject("device");
 <template>
   <div>
     <div class="p-5 mb-32">
-      <div
-        :class="[' relative w-full  h-screen p-5 bg-cover bg-center  bg-fixed text-white text-center',
-         {'bg-fixed ': device === 'pc'},
-        {'  ': device === 'mobile'}]"
-        :style="{ 'background-image':` url(${headerPic}) `}"
-      ></div>
+      <div class="relative w-full h-screen">
+        <!-- 使用 ::before 伪元素显示背景图片 -->
+        <div class="absolute inset-0 bg-cover bg-center"
+             :style="{ backgroundImage: `url(${headerPic})` }"></div>
 
-      <div class="header relative w-full h-screen p-5 text-white text-center">
-        Using the container
-        The container class sets the max-width of an element to match the min-width of the current breakpoint. This is useful if you’d prefer to design for a fixed set of screen sizes instead of trying to accommodate a fully fluid viewport.
-        Note that unlike containers you might have used in other frameworks, Tailwind’s container does not center itself automatically and does not have any built-in horizontal padding.
-        To center a container, use the mx-auto utility:
+        <div class="flex flex-col justify-center items-center h-full text-white text-center">
+          <div class="text-xs">2024</div>
+          <div class="text-2xl font-bold">We’re getting married</div>
+          <div class="flex justify-between pt-3 mt-5 border-t border-white">
+            <div>Jay & Gabrielle</div>
+            <div>DEC.17</div>
+          </div>
+          <div class="absolute bottom-[10%] right-0 text-end text-3xl">
+            please join us
+            <br />and
+            <br />celebrate together
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
+
 <style scoped>
-html {
+html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
-.header::before {
-  contain: "";
-  position: fixed;
+
+/* 背景图片的样式设置 */
+.absolute {
+  position: absolute;
   z-index: -1;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
-  background-color: transparent;
+  background-position: center;
   background-image: url(${headerPic});
 }
 </style>
