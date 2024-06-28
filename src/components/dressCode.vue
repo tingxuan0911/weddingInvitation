@@ -50,13 +50,6 @@ const dressColor = ref([
         </div>
       </div>
     </div>
-
-    <!-- <div
-      class="relative w-full h-fit py-32 bg-cover bg-center bg-fixed text-white text-center"
-      :style="{ 'background-image': `url(${dresscode})` }"
-    >
-
-    </div>-->
   </div>
 </template>
 
