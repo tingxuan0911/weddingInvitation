@@ -8,7 +8,7 @@ import headerPic from "@/img/header.jpg";
        
         <div
           class="absolute -z-10 top-0 right-0 inset-0 bg-cover bg-center bg-fixed-ios"
-          :style="{ backgroundImage: `url(${headerPic})` }"
+          :style="{ backgroundImage: `url(${headerPic})`, backgroundSize: 'cover' }"
         ></div>
 
         <div class="text-xs">2024</div>
