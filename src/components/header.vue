@@ -5,9 +5,9 @@ import headerPic from "@/img/header.jpg";
   <div>
     <div class="p-5 mb-32">
       <div class="relative w-full h-screen text-white text-center p-5">
-        <!-- 背景圖片 -->
+       
         <div
-          class="absolute -z-10 top-0 right-0 inset-0 bg-cover bg-center"
+          class="absolute -z-10 top-0 right-0 inset-0 bg-cover bg-center bg-fixed-ios"
           :style="{ backgroundImage: `url(${headerPic})` }"
         ></div>
 
@@ -26,4 +26,11 @@ import headerPic from "@/img/header.jpg";
     </div>
   </div>
 </template>
+<style scoped>
+  .bg-fixed-ios {
+    /* 以下是针对iOS的固定背景样式 */
+    background-attachment: fixed;
+    -webkit-background-clip: padding-box; /* 防止iOS背景拉伸 */
+  }
+</style>
 
