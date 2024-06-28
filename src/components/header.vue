@@ -26,8 +26,9 @@ import headerPic from "@/img/header.jpg";
 </template>
 <style scoped>
 .header{
-     background-size: cover;
-     background-position:  center;
+     background-size: 100% center;
+     background-repeat:  no-repeat;
+     background-position:  center ;
      background-attachment: fixed;
 }
   
