@@ -1,5 +1,4 @@
 
-複製程式碼
 <script setup>
 import { ref, inject } from "vue";
 const device = inject("device");
