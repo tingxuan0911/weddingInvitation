@@ -1,7 +1,7 @@
 
 複製程式碼
 <script setup>
-import { ref ,inject} from "vue";
+import { ref, inject } from "vue";
 const device = inject("device");
 
 const timeline = ref([
@@ -36,10 +36,12 @@ const timeline = ref([
 <template>
   <div class="px-5">
     <div class="text-2xl font-bold">Wedding Timeline</div>
-    <div class="mx-auto w-fit  font-medium">
+    <div class="mx-auto w-fit font-medium">
       <div v-for="(item, index) in timeline" :key="index">
-        <div :class="['flex items-center ',{'ml-10 text-xl': device === 'pc'},
-        {'text-md ml-7 ': device === 'mobile'}]">
+        <div
+          :class="['flex items-center ',{'ml-10 text-xl': device === 'pc'},
+        {'text-md ml-7 ': device === 'mobile'}]"
+        >
           <div class="flex items-end">
             <div>{{ item.time }}</div>
             <div class="text-xs">{{ item.ampm }}</div>
@@ -50,7 +52,11 @@ const timeline = ref([
           <div>{{ item.route }}</div>
         </div>
       </div>
-      <div class=" text-sm ml-16 mt-[100px] italic font-bold">hope you enjoy the wedding</div>
+      <div
+        :class="[' text-sm mt-[100px] italic font-bold',
+        {'ml-16 ': device === 'pc'},
+        {'ml-10 ': device === 'mobile'}]"
+      >hope you enjoy the wedding</div>
     </div>
   </div>
 </template>
