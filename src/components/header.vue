@@ -6,7 +6,7 @@ import headerPic from "@/img/header.jpg";
   <div>
     <div class="p-5 mb-32">
       <div
-        class="header relative w-full h-dvh p-5 bg-cover bg-center bg-no-repeat bg-fixed text-white text-center"
+        class="header relative w-full h-dvh p-5 bg-cover bg-center bg-no-repeat  text-white text-center"
         :style="{ 'background-image': `url(${headerPic})` }"
       >
     
