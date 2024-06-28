@@ -7,9 +7,9 @@ const device = inject("device");
   <div>
     <div class="p-5 mb-32">
       <div
-        :class="['relative w-full h-[95vh] bg-cover bg-center text-white text-center p-5'
+        :class="['relative w-full h-[95vh] bg-cover bg-no-repeat  text-white text-center p-5'
       ,{' bg-fixed': device === 'pc'}]"
-        :style="{ backgroundImage: `url(${headerPic})` }"
+          :style="{ backgroundImage: `url(${headerPic})` }"
       >
         <div class="text-xs">2024</div>
         <div class="text-2xl font-bold">We’re getting married</div>
@@ -17,7 +17,7 @@ const device = inject("device");
           <div>Jay & Gabrielle</div>
           <div>DEC.17</div>
         </div>
-        <div class="absolute bottom-[10%] right-0 text-end text-3xl">
+        <div class="absolute bottom-[10%] right-2 text-end text-3xl">
           please join us
           <br />and
           <br />celebrate togethe
