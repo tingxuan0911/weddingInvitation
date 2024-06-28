@@ -7,7 +7,7 @@ import headerPic from "@/img/header.jpg";
       <div class="relative w-full h-screen text-white text-center p-5">
         <!-- 背景圖片 -->
         <div
-          class="absolute -z-10 top-0 right-0 inset-0 bg-cover bg-center"
+          class="absolute -z-10 top-0 right-0 inset-0 bg-cover bg-center bg-fixed"
           :style="{ backgroundImage: `url(${headerPic})` }"
         ></div>
 
