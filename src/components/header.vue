@@ -1,7 +1,6 @@
 <script setup>
 import headerPic from "@/img/header.jpg";
 </script>
-
 <template>
   <div>
     <div class="p-5 mb-32">
