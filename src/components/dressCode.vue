@@ -23,13 +23,17 @@ const dressColor = ref([
 </script>
 <template>
   <div class="p-5 mb-20">
-    <div
-      class="relative w-full h-fit py-32 bg-cover bg-center bg-fixed text-white text-center"
-      :style="{ 'background-image': `url(${dresscode})` }"
-    >
+    <div class="relative w-full h-fit py-32 text-white text-center p-5">
+      <!-- 背景圖片 -->
+      <div
+        class="absolute -z-10 top-0 right-0 inset-0 bg-cover bg-center"
+        :style="{ backgroundImage: `url(${dresscode})` }"
+      ></div>
       <div>
         <div class="text-2xl font-bold mb-20">Dress Code</div>
-        <div class="flex flex-wrap justify-center items-end gap-[60px] mx-auto w-[300px] sm:w-[600px]">
+        <div
+          class="flex flex-wrap justify-center items-end gap-[60px] mx-auto w-[300px] sm:w-[600px]"
+        >
           <div v-for="(item, idx) in dressColor" :key="idx">
             <div class="w-[70px] text-center">
               <div class="text-sm mb-10">{{ item.color }}</div>
@@ -46,6 +50,13 @@ const dressColor = ref([
         </div>
       </div>
     </div>
+
+    <!-- <div
+      class="relative w-full h-fit py-32 bg-cover bg-center bg-fixed text-white text-center"
+      :style="{ 'background-image': `url(${dresscode})` }"
+    >
+
+    </div>-->
   </div>
 </template>
 

@@ -33,7 +33,7 @@ const timeline = ref([
 </script>
 
 <template>
-  <div class="px-5">
+  <div class="px-5 mb-20">
     <div class="text-2xl font-bold">Wedding Timeline</div>
     <div class="mx-auto w-fit font-medium">
       <div v-for="(item, index) in timeline" :key="index">
