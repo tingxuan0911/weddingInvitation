@@ -25,7 +25,7 @@ const dressColor = ref([
 <template>
   <div class="p-5 mb-20">
     <div
-      :class="['relative w-full h-fit py-32 bg-cover bg-center text-white text-center p-5',
+      :class="['relative w-full h-fit py-32 bg-cover bg-center text-white text-center ',
       {' bg-fixed': device === 'pc'}]"
       :style="{ backgroundImage: `url(${dresscode})` }"
     >
