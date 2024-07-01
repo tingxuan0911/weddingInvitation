@@ -7,8 +7,8 @@ const device = inject("device");
   <div>
     <div class="p-5 mb-32">
       <div
-        :class="['relative w-full h-[95vh] bg-cover bg-no-repeat  text-white text-center p-5'
-      ,{' bg-fixed': device === 'pc'}]"
+        :class="['relative w-full h-[95vh] bg-cover  bg-no-repeat  text-white text-center p-5'
+      ,{' bg-fixed': device === 'pc'},{' bg-center': device === 'mobile'}]"
           :style="{ backgroundImage: `url(${headerPic})` }"
       >
         <div class="text-xs">2024</div>
